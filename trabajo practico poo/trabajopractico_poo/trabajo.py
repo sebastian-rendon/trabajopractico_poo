@@ -24,3 +24,6 @@ class InterfazUsuario:
     def mostrarAlertas(self, alerta):
         self.alertas.append(alerta)
         print(f"Alerta: {alerta}")
+
+    def configurarRiego(self, umbralBajo, umbralAlto):
+        print(f"Configuración de Riego: Humedad Baja {umbralBajo}%, Humedad Alta {umbralAlto}%")
