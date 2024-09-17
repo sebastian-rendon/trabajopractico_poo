@@ -20,3 +20,7 @@ class InterfazUsuario:
     def mostrarDatos(self, humedad):
         self.nivelHumedad = humedad
         print(f"Nivel Actual de Humedad: {self.nivelHumedad}%")
+
+    def mostrarAlertas(self, alerta):
+        self.alertas.append(alerta)
+        print(f"Alerta: {alerta}")
