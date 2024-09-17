@@ -16,3 +16,7 @@ class InterfazUsuario:
     def __init__(self):
         self.nivelHumedad = 0.0
         self.alertas = []
+
+    def mostrarDatos(self, humedad):
+        self.nivelHumedad = humedad
+        print(f"Nivel Actual de Humedad: {self.nivelHumedad}%")
