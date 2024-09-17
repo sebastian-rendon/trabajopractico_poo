@@ -42,4 +42,5 @@ class Riego:
         else:
             return "Riego adecuado"
 
-    
+    def obtenerConfiguracion(self):
+        return f"Umbral Bajo: {self.umbralBajo}, Umbral Alto: {self.umbralAlto}"
