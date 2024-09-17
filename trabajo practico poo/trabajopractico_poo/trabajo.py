@@ -12,3 +12,7 @@ class Sensor:
     def obtenerHumedad(self):
         return self.humedad
 
+class InterfazUsuario:
+    def __init__(self):
+        self.nivelHumedad = 0.0
+        self.alertas = []
