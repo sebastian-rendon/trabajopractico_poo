@@ -33,3 +33,13 @@ class Riego:
     def __init__(self, umbralBajo, umbralAlto):
         self.umbralBajo = umbralBajo
         self.umbralAlto = umbralAlto
+
+    def ajustarRiego(self, humedad):
+        if humedad < self.umbralBajo:
+            return "Aumentar riego"
+        elif humedad > self.umbralAlto:
+            return "Reducir riego"
+        else:
+            return "Riego adecuado"
+
+    
