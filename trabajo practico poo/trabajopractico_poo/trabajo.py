@@ -27,3 +27,9 @@ class InterfazUsuario:
 
     def configurarRiego(self, umbralBajo, umbralAlto):
         print(f"Configuración de Riego: Humedad Baja {umbralBajo}%, Humedad Alta {umbralAlto}%")
+
+
+class Riego:
+    def __init__(self, umbralBajo, umbralAlto):
+        self.umbralBajo = umbralBajo
+        self.umbralAlto = umbralAlto
