@@ -1,3 +1,5 @@
+import random
+
 class Sensor:
     def __init__(self, id, ubicacion):
         self.id = id
@@ -5,12 +7,12 @@ class Sensor:
         self.ubicacion = ubicacion
 
     def medirHumedad(self):
-        # Simulación de medición de humedad
-        import random
+        
         self.humedad = random.uniform(0, 100)
 
     def obtenerHumedad(self):
         return self.humedad
+
 
 class InterfazUsuario:
     def __init__(self):
@@ -44,3 +46,16 @@ class Riego:
 
     def obtenerConfiguracion(self):
         return f"Umbral Bajo: {self.umbralBajo}, Umbral Alto: {self.umbralAlto}"
+
+# Uso
+sensor = Sensor(1, "Jardín")
+sensor.medirHumedad()
+humedad_actual = sensor.obtenerHumedad()
+
+interfaz = InterfazUsuario()
+interfaz.mostrarDatos(humedad_actual)
+
+riego = Riego(20.0, 60.0)
+recomendacion = riego.ajustarRiego(humedad_actual)
+interfaz.mostrarAlertas(recomendacion)
+
